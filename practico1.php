@@ -21,21 +21,42 @@
 
 
 $fichaalumno1 = [
-    "nombre"=>"santiago maximiliano",
-    "apellido"=>"santiago maximiliano",
+    "nombre"=>"Santiago Maximiliano",
+    "apellido"=>"Bomba",
     "edad"=>"43",    
     // settype($edad,"int");
-    "hobbie"=>"cocinero, karate, rugby, karaoke nivel ninja",
+    "hobbie"=>"preparacion de comidas, karate, rugby, karaoke nivel ninja",
     "editordecodfav"=>"Visual Studio Code / VIM / EDIT del D.O.S",
     "soqueusa"=>"WINDOWS 10, WINDOWS 7, WINDOWS XP, DEBIAN, SLACKWARE, KUBUNTU, UBUNTU"
     
 ];
+echo "<pre>";
 var_dump($fichaalumno1);
 // echo nl2br("Nombre del alumno: " . $fichaalumno1["nombre"]);
 
+// metodo normal echo linea por linea
+echo "<pre>";
 echo "<br>" . "Nombre del alumno: " . $fichaalumno1["nombre"];
+echo "<br>" . "Apellido: " . $fichaalumno1["apellido"];
+echo "<br>" . "Edad: " . $fichaalumno1["edad"];
+echo "<br>" . "Hobbies: " . $fichaalumno1["hobbie"];
+echo "<br>" . "Editor de codigo favorito: " . $fichaalumno1["editordecodfav"];
+echo "<br>" . "Sistema operativo que usa: " . $fichaalumno1["soqueusa"];
 
 
+
+// metodo con un foreach
+// hacer un foreach mezclado 
+echo "<pre>";
+echo "Mostrar con foreach";
+
+
+ 
+foreach($fichaalumno1 as $etiqueta=>$dato)
+	{
+	echo $etiqueta . " : " . $dato;
+	echo "<br>";
+	}
 
 ?>
 
